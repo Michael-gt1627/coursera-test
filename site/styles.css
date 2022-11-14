@@ -1,0 +1,9 @@
+	/*class can be reused but id can't you can use come in one css rule*/
+	/*parent selector and child: article > p; read from left to right(must be a direct child for this to work)*/
+	/*for the above if you want it at any level dont use greater than just rght the selector space and another selector*/
+	/*!important to override specficity*/
+	/*text-transform...capitalze, uppercase, Lowercase ...etc*/
+	/*box-sizing: border box; overflow if to much content for small space*/
+	/*to start media query use @media first*/
+	/*<meta name="viewport" content="width=device-width, initial-scale=1">*/
+
