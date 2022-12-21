@@ -1,129 +1,355 @@
+
+  /*class can be reused but id can't you can use come in one css rule*/
+  /*parent selector and child: article > p; read from left to right(must be a direct child for this to work)*/
+  /*for the above if you want it at any level dont use greater than just rght the selector space and another selector*/
+  /*!important to override specficity*/
+  /*text-transform...capitalze, uppercase, Lowercase ...etc*/
+  /*box-sizing: border box; overflow if to much content for small space*/
+  /*to start media query use @media first*/
+  /*<meta name="viewport" content="width=device-width, initial-scale=1">*/
 *{
   box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: auto;
-  font-family: “Comic Sans MS”, “Comic Sans”, cursive;
 }
-h1{
+/********navigation********/  
+.nav-container{  
+  margin-left: 100px;
+}
+.navbar{
+  background-color: #F80606;
+  width: 100%;
+  margin: 0px;
+  height: 142px;
+  
+}
+.nav-test{
+  position: absolute;
+  left: 225px;
+  top: 14px;
+}
+.navbar-brand{
+  margin-top: 13px;
+  height: 10px;
+  margin-right: 0px;
+  position: relative;
+
+}
+.nav-test{
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+}
+.nav-test:hover{
+  text-decoration: none;
+  color: #fff;
+}/*
+
+li:hover{
+  text-decoration: none;
+  color: #FC1010; 
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+  font-weight: 600;
+}
+.glyphicon{
+    float: right;
+    margin: 0px;
+    position: relative;
+    top: 60px;
+    left: 4%;
+    height: 26px;
+    background-color: #F80606;
+    border: 0px;
+} */
+.edit:hover{
+  color: #fff;
+}
+.edit:active{
+  background-color: #B10000;
+}
+.nav-test{
+  color: #fff;
+  margin-top: 30px;
+  margin-left: -18px;
+  font-size: 1.4em;
+}
+.navbar-toggle{
+  border: 0px;
+  position: relative;
+  top: -5px;
+  right: 38px;
+}
+.icon-bar{
+  border: 1.6px solid white;
+  border-right: 25px solid white;
+  margin-bottom: 3px; 
+}
+.edit{
+  color: #000;
+  background-color: #F80606;
+  float: right;
+  position: absolute;
+  right: 120px;
+  top: 57px;
+  border: 0px;
+}
+form{
+  position: absolute;
+  right: 180px;
+  top: 40px;
+}
+@media(max-width: 1150px) {
+    form{
+    position: absolute;
+    right: 80px;
+  }
+}
+@media(max-width: 1000px){
+  a.navbar-brand{
+    position: relative;
+    right: 80px; 
+  }
+  .nav-test{
+    top: 20px;
+    left: 140px;
+
+  }
+}
+@media(max-width: 890px) {
+    form{
+    position: absolute;
+    right: 10px;
+  }
+}
+@media(max-width: 574px){
+  img#brand{
+    margin-top: 0px;
+    margin-left: -20px;
+    width: 80px;
+  }
+  .navbar-toggle{
+  border: 0px;
+  position: relative;
+  top: -4px;
+  left: 10px;
+  }
+  .edit{
+    position: absolute;
+    right: 74px;
+    bottom: 100px;
+    padding: 0px;
+  }
+  .nav-test{
+    font-size: 1.2em;
+    position: absolute;
+    left: 102px;
+    top: 43px;
+    margin-top: 0px;
+    margin-left: -20px;
+  }
+  .navbar{
+    height: 118px;
+  }
+}
+@media(max-width: 380px){
+  img#brand{
+    margin-top: -10px;
+    width: 56px;
+  }
+  .edit{
+    position: absolute;
+    right: 61px;
+    top: 30px;
+  }
+  .navbar-toggle{
+  border: 0px;
+  position: relative;
+  top: -30px;
+  left: 22px;
+  }
+  .navbar{
+    height: 84px;
+  }
+  .nav-test{
+    position: absolute;
+    left: 80px;
+    top: 28px;
+    font-size: 0.9em;
+  }
+}
+/*
+ul{
+  list-style: none;
+  font-size: 16px;
+
+}
+li{
+  position: relative;
+  top: 500px;
+  float: right;
+  color: #000;
+
+}*/
+
+/********end of navigaton********/
+
+/********slide show********/
+
+.check {
+  opacity: 69%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.mySlides {
+  display: none;
+}
+.slideshow-container {
+ 
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.dot {
+  position: relative;
+  bottom: 34px;
   text-align: center;
-  margin-bottom: 60px;
-  font-size: 175%;
 }
-.row{
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 14px;
+  width: 14px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@keyframes fade {
+  from {opacity: .86} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+@media (max-width: 380px){
+  .body-img{
+  margin-top: -14.6px;
+  }
+}
+
+/********slide show********/
+/********main content********/
+
+h2{
+  position: relative;
+  text-align: center;
+  font-size: 2.4vw;
+}
+.hr-respone{
+  position: relative;
+}
+.hr-lines{
+    font-size: 2.7rem;
+    line-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+.hr-lines:before{
+  content:" ";
+  display: block;
+  height: 1.8px;
+  width: 90px;
+  background: #000;
+  transform: translate(-15px, 0px);
+  overflow: hidden;
+}
+.hr-lines:after{
+  content:" ";
+  display: block;
+  height: 1.8px;
+  width: 90px;
+  background: #000;
+  transform: translate(15px, 0px);
+  overflow: hidden;
+}
+#secondlogo{
+  font-size: 3em;
+  font-style: italic;
+  text-align: center;
+  margin-top: 90px; 
+  font-weight: bold;
+}
+.headmission{
+  font-size: 1.9em;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: 560;
+}
+.side{
+  text-align: left;
+  font-size: 1.3em;
+}
+#bodyimg{
   width: 100%;
 }
-section{
-  background-color: #94A7AD;
-  height: 260px;
-  padding:24px;
-  margin: 10px;
+.left{
+  margin-top: 60px;
+  height: 200px;
+}
+.rowanchor{
   position: relative;
-  padding-top: 60px;
-  border: 2px solid black;
 }
-section > div{
-  padding-top: 3px;
-  width: 40%;
-  height: 15%;
-  position: absolute;
-  left: 60.4%;
-  bottom: 86%;
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: bold;
-  border: 2px solid black;
+@media (max-width: 530px){
+  #secondlogo{
+    position: absolute;
+    top: 176px;
+    left: 20px;
+    width: 100%;
+    font-size: 1.7em;
+    font-weight: 500;
+  }
+  .secondlogo{
+    padding: 10px;
+    background-color: blue;
+    color: #fff;
+  }
+  #mission{
+    width: 100%;
+  }
 }
-#div1{
-  background-color: #FF72CC;
-  font-size: 125%;
-}
-#div2{
-  background-color: #FF4D00;
-  font-size: 125%;
-}
-#div3{
-  background-color: #F5B600;
-  font-size: 125%;
-}
-@media (min-width: 992px){
-     .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
-      float: left;
-     }
-     .col-lg-1{
-      width: 8.33%;
-     }
-     .col-lg-2{
-      width: 16.67%;
-     }
-     .col-lg-3{
-      width: 25%;
-     }
-     .col-lg-4{
-      width: 31%;
-     }
-     .col-lg-5{
-      width: 41.67%;
-     }
-     .col-lg-6{
-      width: 50%;
-     }
-     .col-lg-7{
-      width: 58.33%;
-     }
-     .col-lg-8{
-      width: 66.67%;
-     }
-     .col-lg-9{
-      width: 75%;
-     }
-     .col-lg-10{
-      width: 83.33%;
-     }
-     .col-lg-11{
-      width: 91.67%;
-     }
-     .col-lg-12{
-      width: 100%;
-     }
-}
-@media (min-width: 768px) and (max-width: 991px){
-     .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
-      float: left;
-     }
-     .col-md-1{
-      width: 8.33%;
-     }
-     .col-md-2{
-      width: 16.66%;
-     }
-     .col-md-3{
-      width: 25%;
-     }
-     .col-md-4{
-      width: 33.33%;
-     }
-     .col-md-5{
-      width: 41.67%;
-     }
-     .col-md-6{
-      width: 47%;
-     }
-     .col-md-7{
-      width: 58.33%;
-     }
-     .col-md-8{
-      width: 66.67%;
-     }
-     .col-md-9{
-      width: 75%;
-     }
-     .col-md-10{
-      width: 83.33%;
-     }
-     .col-md-11{
-      width: 91.67%;
-     }
-     .col-md-12{
-      width: 96.24716548%;
-     }
+.conatiner-margin{
+
 }
