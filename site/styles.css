@@ -321,6 +321,7 @@ h2{
 .side{
   text-align: left;
   font-size: 1.3em;
+  padding-bottom: 20px;
 }
 #bodyimg{
   width: 100%;
@@ -340,6 +341,7 @@ h2{
     width: 100%;
     font-size: 1.7em;
     font-weight: 500;
+    visibility: hidden;
   }
   .secondlogo{
     padding: 10px;
@@ -350,6 +352,15 @@ h2{
     width: 100%;
   }
 }
-.conatiner-margin{
+.new-try{
+  padding: 10px; 
+  color: white; 
+  font-size: 1.6em;
+  background-color: blue;
 
+}
+@media (min-width: 530px){
+  .new-try{
+    visibility: hidden;
+  }
 }
