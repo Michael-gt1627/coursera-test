@@ -40,8 +40,7 @@ var showLoading = function (selector) {
 // with propValue in given 'string'
 var insertProperty = function (string, propName, propValue) {
   var propToReplace = "{{" + propName + "}}";
-  string = string
-    .replace(new RegExp(propToReplace, "g"), propValue);
+  string = string.replace(new RegExp(propToReplace, "g"), propValue);
   return string;
 };
 
@@ -107,7 +106,6 @@ function buildAndShowHomeHTML (categories) {
 
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
-      insertProperty()
       // chosen category from STEP 2. Use existing insertProperty function for that purpose.
       // Look through this code for an example of how to do use the insertProperty function.
       // WARNING! You are inserting something that will have to result in a valid Javascript
@@ -119,7 +117,7 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       var homeHtmlToInsertIntoMainPage = 
-      insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName); 
+      insertProperty(homeHtml, "randomCategoryShortName", "'" + chosenCategoryShortName + "'");
 
 
 
